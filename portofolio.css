@@ -1,0 +1,301 @@
+/* Global Style */
+:root{
+    --container-width: 1150px;
+    --main-color: tomato;
+    --main-color-hover: orangered;
+}
+*{
+    box-sizing: border-box;
+}
+
+html, body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+h1{
+    padding: 0;
+    margin: 0;
+    font-size: 2rem;
+    text-shadow: 2px 2px 3px silver;
+}
+
+.button{
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 1.3em;
+    padding: 0.7em 1.2em;
+    /* background-color: #82E0AA; */
+    background-color: var(--main-color);
+    color: white;
+    box-shadow: 5px 5px black;
+    font-size: 1.1em;
+    border-radius: 0.25rem;
+}
+
+.button:hover{
+    /* background-color: #2ECC71; */
+    background-color: var(--main-color-hover);
+}
+
+/* ===================== */
+/*  HEADER DAN NAVIGASI */
+/* ===================== */
+.nav-container{
+    top: 0px;
+    z-index: 100;
+}
+
+.nav-container header {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    width: 80vw;
+    height: 60px;
+    margin: 0 auto;
+}
+
+.nav-container ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-container li a{
+    display: block;
+    color: black;
+    padding: 0 1.1em;
+    text-decoration: none;
+    text-transform: uppercase;
+    height: 60px;
+    line-height: 60px;
+}
+
+.nav-container li a:hover{
+    color: var(--main-color-hover);
+    transition: all 0.3s;
+    border-bottom: 5px solid orangered;
+}
+
+/* Sembunyikan hamburger icon */
+.nav-container header label, #hamburger{
+    display: none;
+}
+
+/* =============== */
+/*     HERO */
+/* =============== */
+.hero{
+    display: flex;
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: 0 auto;
+    margin-top: 50px;
+    padding: 2em;
+    gap: 100px;
+}
+
+.hero-text{
+    width: 75%;
+    margin: 1em;
+}
+
+.hero-image{
+    width: 25%;
+    margin: 1em;
+}
+
+.hero-image img{
+    width: 200px;
+    height: 200px;
+    border: 1px solid silver;
+    border-radius: 100%;
+    padding: 0.3rem;
+    box-shadow: 2px 2px 5px black;
+}
+
+/* ============== */
+/*     POST */
+/* ============== */
+.post-container{
+    background-color: #EDF7FA;
+}
+
+.post-header{
+    max-width: var(--container-width);
+    margin: 1em auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    padding: 2em;
+}
+
+.post-container a{
+    text-decoration: none;
+}
+
+.post-container a:hover{
+    color: var(--main-color-hover);
+    transition: all 0.3s;
+}
+
+.post{
+    display: flex;
+    justify-content: space-between;
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 2em;
+    gap: 20px;
+}
+.post-content{
+    width: 50%;
+    margin-top: -50px;
+    background-color: white;
+    padding: 2em;
+    border-radius: 0.25rem;
+}
+
+.post-content h2{
+    font-size: 26px;
+    font-weight: bold;
+}
+
+/* FEATURE */
+.feature-container{
+    /* background-color: #2ECC71; */
+    max-width: 1150px;
+    margin: auto;
+    padding: 2em;
+    /* display: flex; */
+}
+
+.feature-container hr{
+    /* width: 25%; */
+    border: 0;
+    border-top: 1px solid #ddd;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.feature{
+    display: flex;
+    gap: 25px;
+    /* margin-top: 20px; */
+    margin-bottom: 10px;
+}
+
+.feature-image{
+    border: 1px solid silver;
+    padding: 0.3rem;
+    box-shadow: 2px 2px 5px black;
+    border-radius: 6px;
+}
+
+.feature-text label{
+    background-color: #17202A;
+    color: white;
+    padding: 0.2em 0.7em;
+    border-radius: 25px;
+    margin-right: 20px;
+    font-size: 10px;
+}
+
+.feature-text a{
+    text-decoration: none;
+}
+
+.feature-text a:hover{
+    color: var(--main-color-hover);
+    transition: all 0.3s;
+}
+
+.feature-text small{
+    color: #999;
+}
+
+
+
+/* FOOTER  */
+.footer{
+    margin-top: 15px;
+}
+
+.footer-image, .footer-text{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 5px;
+    font-size: 12px;
+}
+
+/* =================== */
+/*  BREAKPOINT TABLET */
+/* =================== */
+@media screen and (max-width: 768px){
+    /* Header dan Navigasi */
+
+    .nav-container{
+        background-color: #566573;
+        position: sticky;
+    }
+    /* Tampilkan hamburger icon */
+    .nav-container header label{
+        display: inline-block;
+        color: white;
+        font-style: normal;
+        font-size: 2rem;
+        padding: 0.5rem;
+        padding-left: 1rem;
+    }
+
+    /* Susun ulang menu menjadi vertikal */
+    .nav-container header{
+        width: 100%;
+    }
+
+    .nav-container nav ul{
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+    }
+
+    .nav-container li a{
+        display: block;
+        color: black;
+        background-color: #566573;
+        padding-left: 0 2em;
+        text-decoration: none;
+        text-transform: uppercase;
+        height: auto;
+    }
+
+    .nav-container li a:hover{
+        border-bottom: none;
+    }
+
+    /* Untuk menampilkan dan menyembuntikan menu */
+    .nav-container nav {display: none;}
+    .nav-container header input:checked ~ nav {
+        display: flex;
+    }
+
+    .nav-container{
+        position: absolute;
+        left: 0;
+        /* z-index: 100; */
+    }
+
+    /* HERO */
+    .hero{
+        flex-direction: column-reverse;
+        padding: 1em 2em;
+        gap: 10px;
+        /* justify-items: center; */
+        /* align-items: center; */
+        text-align: center;
+    }
+}
