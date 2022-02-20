@@ -141,8 +141,9 @@ h1{
 .post{
     display: flex;
     justify-content: space-between;
+    flex-flow: row;
     max-width: var(--container-width);
-    margin: 0 auto;
+    /* margin: 0 auto; */
     padding: 2em;
     gap: 20px;
 }
@@ -179,7 +180,6 @@ h1{
 .feature{
     display: flex;
     gap: 25px;
-    /* margin-top: 20px; */
     margin-bottom: 10px;
 }
 
@@ -235,7 +235,7 @@ h1{
 
     .nav-container{
         background-color: #566573;
-        position: sticky;
+        /* position: sticky; */
     }
     /* Tampilkan hamburger icon */
     .nav-container header label{
@@ -262,7 +262,7 @@ h1{
 
     .nav-container li a{
         display: block;
-        color: black;
+        color: white;
         background-color: #566573;
         padding-left: 0 2em;
         text-decoration: none;
@@ -274,23 +274,16 @@ h1{
         border-bottom: none;
     }
 
-    /* Untuk menampilkan dan menyembuntikan menu */
+    /* Untuk menampilkan dan menyembunyikan menu */
     .nav-container nav {display: none;}
     .nav-container header input:checked ~ nav {
         display: flex;
     }
 
-    .nav-container{
-        position: absolute;
-        left: 0;
-        /* z-index: 100; */
-    }
-
+    
     /* HERO */
     .hero{
         flex-direction: column-reverse;
-        /* padding: 1em 2em; */
-        padding: 15px 15px;
         gap: 10px;
         text-align: center;
     }
@@ -303,16 +296,35 @@ h1{
 
     .hero-text{
         width: 100%;
+        padding: 15px 15px;
+        margin: auto;
     }
 
     .post{
         display: flex;
         flex-direction: column;
-        gap: 20px;
+        margin-top: -50px;
     }
 
     .post-content{
         width: 100%;
-    
+        margin: 2px;
+    }
+
+    .feature{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .feature-image{
+        display: flex;
+        justify-content: center;
+        margin: auto;
+        margin-bottom: 10px;
+    }
+
+    .feature-text{
+        text-align: center;
+        margin-top: 10px;
     }
 }
