@@ -26,7 +26,6 @@ h1{
     display: inline-block;
     margin-top: 1.3em;
     padding: 0.7em 1.2em;
-    /* background-color: #82E0AA; */
     background-color: var(--main-color);
     color: white;
     box-shadow: 5px 5px black;
@@ -35,7 +34,6 @@ h1{
 }
 
 .button:hover{
-    /* background-color: #2ECC71; */
     background-color: var(--main-color-hover);
 }
 
@@ -44,7 +42,6 @@ h1{
 /* ===================== */
 .nav-container{
     top: 0px;
-    z-index: 100;
 }
 
 .nav-container header {
@@ -292,10 +289,30 @@ h1{
     /* HERO */
     .hero{
         flex-direction: column-reverse;
-        padding: 1em 2em;
+        /* padding: 1em 2em; */
+        padding: 15px 15px;
         gap: 10px;
-        /* justify-items: center; */
-        /* align-items: center; */
         text-align: center;
+    }
+
+    .hero-image{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .hero-text{
+        width: 100%;
+    }
+
+    .post{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .post-content{
+        width: 100%;
+    
     }
 }
